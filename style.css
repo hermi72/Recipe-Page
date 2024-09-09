@@ -1,0 +1,238 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+:root {
+--stone-100: hsl(30, 54%, 90%);
+--stone-150: hsl(30, 18%, 87%);
+--stone-600: hsl(30, 10%, 34%);
+--stone-900: hsl(24, 5%, 18%);
+
+--brown-800: hsl(14, 45%, 36%);
+
+--rose-800: hsl(332, 51%, 32%);
+--rose-50: hsl(330, 100%, 98%);
+
+--young-serif: "Young Serif", serif;
+--outfit: "Outfit", sans-serif;
+
+}
+
+/*Font*/
+
+@import url('https://fonts.google.com/specimen/Outfit');
+/*Weights: 400*/
+
+
+body {
+    background-color: var(--stone-100);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+.line {
+    height: 1.5px;
+    background-color: var(--stone-150);
+    border-radius: 10px;
+}
+
+.line2 {
+    height: 2px;
+    background-color: var(--stone-150);
+    border-radius: 10px;
+
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: 45vw;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 15px;
+    padding-bottom: 15px;
+}
+
+.omelette-image {
+    width: 100%;
+    margin: auto;
+    padding: 20px 20px 15px 20px;
+    border-radius: 30px;
+}
+
+#headline-font {
+    font-family: var(--young-serif);
+}
+
+.text-content {
+    text-align: left;
+    padding: 0 20px 20px 20px;
+} 
+
+h1 {
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--stone-900);
+} 
+
+.paragraph-text {
+    color: var(--stone-600);
+    font-family: var(--outfit);
+    font-weight: 400;
+}
+
+#preparation-time {
+    font-family: var(--outfit);
+    background-color: var(--rose-50);
+    margin-top: 20px;
+    padding: 20px 20px 10px 20px;
+    border-radius: 15px;
+}
+
+h3 {
+    color: var(--rose-800);
+}
+
+span {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+ul .list1 {
+    color: var(--stone-600);
+    position: relative;
+    padding-left: 20px;
+}
+
+ul .list1::before {
+    content: "•";
+    color: var(--rose-800);
+    position: absolute;
+    left: -10px;
+}
+
+.headline-h2 {
+    font-family: var(--young-serif);
+    color: var(--brown-800);
+    font-weight: 400;
+    margin: 20px 0 10px 0;
+}
+
+ul .list2 {
+    font-family: var(--outfit);
+    color: var(--stone-600);
+    position: relative;
+    padding-left: 20px;
+}
+
+ul .list2::before {
+    content: "•";
+    color: var(--brown-800);
+    position: absolute;
+    left: -8px;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+ol {
+    list-style: none;
+    counter-reset: list-counter;
+}
+
+ol .list3 {
+    font-family: var(--outfit);
+    color: var(--stone-600);
+    position: relative;
+    counter-increment: list-counter;
+    padding-bottom: 8px;
+}
+
+ol .list3::before {
+    content: counter(list-counter) ".";
+    color: var(--brown-800);
+    font-weight: bold;
+    position: absolute;
+    left: -34px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-family: var(--outfit);
+}
+
+.innerbox {
+    width: 50%;
+}
+
+.one {
+    padding-left: 35px;
+    color: var(--stone-600);
+}
+
+.two {
+    color: var(--brown-800);
+    font-weight: bold;
+}
+
+.attribution {
+    display: block;
+    clear: both;
+    text-align: center;
+    padding: 25px;
+    font-family: var(--outfit);
+}
+
+@media screen and (max-width: 431px){
+    
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .omelette-image {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    h1 {
+        line-height: 1.1em;
+        margin-top: 10px;
+    }
+
+    .attribution {
+        background-color: white;
+    }
+
+}
